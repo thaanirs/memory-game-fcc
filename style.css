@@ -38,18 +38,27 @@ body{
 .winner-message{
     z-index: 3;
     position:absolute;
-    background-color: coral;
+    background-color: white;
+    border: blue 1px solid;
+    padding: 2rem;
+    border-radius: 1em;
+    box-shadow: 0 0  0 10px deeppink ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: 50vh;
     left: 50vw;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-25%);
     display: none;
-    
 }
-
+h1{
+    font-size: 3rem;
+}
 #blurred{
     display: none;
     z-index: 2;
-    background-color: currentColor;
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
