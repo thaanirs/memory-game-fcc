@@ -35,6 +35,29 @@ body{
     /* transition: transform .1s ease; */
 }
 
+.winner-message{
+    z-index: 3;
+    position:absolute;
+    background-color: coral;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    display: none;
+    
+}
+
+#blurred{
+    display: none;
+    z-index: 2;
+    background-color: currentColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.9;
+}
+
 .front-face,.back-face{
     position: absolute;
     /* border: 2px solid deeppink; */

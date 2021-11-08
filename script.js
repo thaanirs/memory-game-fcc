@@ -4,6 +4,7 @@ let hasFlippedcard = false;
 let firstCard , secondCard;
 let lockBoard = false;
 
+let  paircount = 0;
 
 function flipCard() {
 
@@ -39,9 +40,18 @@ function unflippedCard() {
     }, 1500);
 }
 function disableCards() {
+    paircount++;
+    console.log(paircount);
     firstCard.removeEventListener('click',flipCard);
     secondCard.removeEventListener('click',flipCard);
     resetBoard();
+    if (paircount==6) {
+        console.log("hey noob you won");
+        setTimeout(() => {
+            document.querySelector(".winner-message").style.display = 'block';
+            document.querySelector("#blurred").style.display = 'block';
+        }, 1000);
+    }
 }
 
 function resetBoard() {
@@ -59,7 +69,6 @@ function resetBoard() {
         card.style.order  = randomPos;
     });
 })();
-
 
 
 cards.forEach(card => card.addEventListener('click',flipCard));
